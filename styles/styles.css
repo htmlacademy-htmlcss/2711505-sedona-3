@@ -135,8 +135,8 @@ body {
   padding: 5px;
   font-size: 10px;
   line-height: 10px;
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(125, 181, 79, 1);
+  color: #ffffff;
+  background-color: #7db54f;
   border-radius: 10px;
 }
 
@@ -335,7 +335,7 @@ body {
 }
 
 .hero-title {
-margin-left: 20px;
+  margin-left: 20px;
 }
 
 .title-light {
@@ -760,7 +760,7 @@ a.breadcrumbs-link:active {
 
 .price-field {
   position: relative;
-  }
+}
 
 .input-min {
   border-top-left-radius: 4px;
@@ -772,8 +772,8 @@ a.breadcrumbs-link:active {
   border-bottom-right-radius: 4px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -793,6 +793,7 @@ input::-webkit-inner-spin-button {
 
 .catalog-sorting {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   padding: 0;
   margin-bottom: 40px;
@@ -817,7 +818,7 @@ input::-webkit-inner-spin-button {
 }
 
 .control-input[type="checkbox"]:hover + .control-mark {
-opacity: 0.6;
+  opacity: 0.6;
 }
 
 .control-input[type="checkbox"]:focus + .control-mark {
@@ -828,6 +829,10 @@ opacity: 0.6;
   opacity: 0.3;
 }
 
+.control-input[type="checkbox"]:disabled + .control-mark {
+  opacity: 0.3;
+}
+
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   width: 12px;
@@ -835,13 +840,13 @@ opacity: 0.6;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(../images/check-mark.svg);
+  background: url("../images/check-mark.svg");
   background-repeat: no-repeat;
   content: "";
 }
 
 .control-input[type="radio"]:hover + .control-mark {
-opacity: 0.6;
+  opacity: 0.6;
 }
 
 .control-input[type="radio"]:focus + .control-mark {
@@ -849,6 +854,10 @@ opacity: 0.6;
 }
 
 .control-input[type="radio"]:active + .control-mark {
+  opacity: 0.3;
+}
+
+.control-input[type="radio"]:disabled + .control-mark {
   opacity: 0.3;
 }
 
@@ -935,10 +944,6 @@ opacity: 0.6;
   border-color: #000000;
 }
 
-.view-link:not(:last-child) {
-  margin-right: 8px;
-}
-
 .title-icon {
   background-image: url("../images/icons/icon-view-title.svg");
 }
@@ -998,7 +1003,7 @@ opacity: 0.6;
   color: #000000;
   background-color: #f2f2f2;
   border: 0;
-  }
+}
 
 .price-input-title {
   position: absolute;
@@ -1041,7 +1046,14 @@ opacity: 0.6;
 
 .select-wrapper {
   position: relative;
-  }
+}
+
+.view-link-wrapper {
+  display: flex;
+  max-width: 160px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
 .select-control:hover,
 .select-control:focus {
@@ -1072,7 +1084,7 @@ opacity: 0.6;
 }
 
 .product-type {
- color: #333333;
+  color: #333333;
   margin: 0;
 }
 
@@ -1175,7 +1187,7 @@ opacity: 0.6;
   display: inline-block;
   padding: 10px 4px;
   min-width: 60px;
-    text-align: center;
+  text-align: center;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
@@ -1228,7 +1240,7 @@ opacity: 0.6;
 
 .subscription-first-page {
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #4d6357;
   background-image: url("../images/subscribe-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1238,7 +1250,7 @@ opacity: 0.6;
 .catalog-products {
   padding: 35px 69px 58px;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #4d6357;
   background-image: url("../images/filter-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1404,6 +1416,13 @@ opacity: 0.6;
   background-color: #f2f2f2;
   border: none;
   cursor: pointer;
+  -moz-appearance: textfield;
+}
+
+.modal-form-input::-webkit-outer-spin-button,
+.modal-form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .plus,
@@ -1414,6 +1433,7 @@ opacity: 0.6;
   border: none;
   width: 40px;
   height: 48px;
+  background-color: #f2f2f2;
   cursor: pointer;
 }
 
@@ -1507,7 +1527,8 @@ opacity: 0.6;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  transform: translate(-50%) translate(-12px);
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 10px;
   background-color: #333333;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);

@@ -126,7 +126,7 @@
           <h2 class="title title-search">Заинтересовались?</h2>
           <p class="subtitle subtitle-search">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие
             предложения гостиниц в Cедоне</p>
-          <a class="button button-big button-search">Поиск гостиницы в Седоне</a>
+          <button class="button button-big button-search" type="button">Поиск гостиницы в Седоне</button>
         </section>
         <section class="subscription subscription-first-page" data-test="subscribe">
           <div class="subscription-title-light">
@@ -142,7 +142,7 @@
           </form>
         </section>
       </main>
-      <footer class="page-footer" data-test="footer" data-test="footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="footer-social-list">
@@ -209,7 +209,7 @@
               <label class="modal-field-label" for="chek-in-date">Дата заезда:</label>
               <div class="check-wrapper">
                 <input class="modal-search-field field" type="text" id="chek-in-date" name="chek-in-date"
-                  placeholder="Укажите дату" value="27 апреля 2020">
+                  placeholder="Укажите дату" value="27 апреля 2020" required>
                 <span class="form-notification invalid-notification">Мы не можем отправить вас в прошлое.</span>
               </div>
             </div>
@@ -217,7 +217,7 @@
               <label class="modal-field-label" for="chek-out-date">Дата выезда:</label>
               <div class="check-wrapper">
                 <input class="modal-search-field field" type="text" id="chek-out-date" name="chek-out-date"
-                  placeholder="Укажите дату" value="1 сентября 2023">
+                  placeholder="Укажите дату" value="1 сентября 2023" required>
                 <span class="form-notification">На эти даты есть свободные номера. Пока есть.</span>
               </div>
             </div>
